@@ -1,0 +1,22 @@
+specVersion: 0.0.2
+apiVersion: 0.0.2
+name: Proof_of_Ownership
+description: "This zkGraph will access historical ownerships of the Azuki NFT collection on Sepolia"
+repository: https://github.com/varun-doshi/Proof-of-Ownership-zkGraph.git
+dataSources:
+  - kind: ethereum
+    network: sepolia
+    event:
+      - address: "0x1bcCd53adbE63DD352410B31ea3b63DCCB627f75"
+        events:
+          - "Transfer(address,address,uint256)"
+
+mapping:
+  language: wasm/assemblyscript
+  file: ./mapping.ts
+  handler: handleBlocks
+
+dataDestinations:
+  - kind: ethereum
+    network: sepolia
+    address: "0x0000000000000000000000000000000000000001"
