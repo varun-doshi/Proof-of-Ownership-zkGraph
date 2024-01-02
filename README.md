@@ -1,4 +1,9 @@
-# zkGraph multiaddr template
+# zkGraph Proof of Ownership
+
+### This zkGraph will access historical ownerships of the Azuki NFT collection on Sepolia
+
+#### Azuki contract address on Sepolia testnet: 0x1bcCd53adbE63DD352410B31ea3b63DCCB627f75
+#### Event being access on Sepolia Testnet: Transfer(address,address,uint256)  
 
 ## Usage CLI
 
